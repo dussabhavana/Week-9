@@ -8,14 +8,14 @@ pipeline {
         }
         stage('Push to Docker Hub') {
             steps {
-                bat 'docker tag registration:v1 sriludone/registration:v1'
-                bat 'docker push sriludone/registration:v1'
+                bat 'docker tag registration:v1 bhavana1274/registration:v1'
+                bat 'docker push bhavana1274/registration:v1'
             }
         }
         stage('Deploy to Kubernetes') {
             steps {
-                bat 'kubectl apply -f D:/DevOps/week-2/deployment.yaml'
-                bat 'kubectl apply -f D:/DevOps/week-2/service.yaml'
+                bat 'kubectl apply -f C:/4YEAR/DevOps/Week-2/deployment.yaml'
+                bat 'kubectl apply -f C:/4YEAR/DevOps/Week-2/service.yaml'
             }
         }
     }
